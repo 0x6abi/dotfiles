@@ -1,0 +1,27 @@
+[core]
+	pager = less
+	editor = helix
+[user]
+	email = 144284968+ninikx@users.noreply.github.com
+	name = nini
+	signingkey = 0859C9B83682679391FEE781514EDDC0C832C81E
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	cm = commit
+	df = diff
+	ps = push
+	pl = pull
+	rs = restore
+	ft = fetch
+[color]
+	ui = true
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[commit]
+	gpgsign = true
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
