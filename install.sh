@@ -44,5 +44,5 @@ zsh -c "npm i -g bash-language-server"
 zsh -c "rustup install stable"
 
 echo "installation complete"
-clear
+# clear
 exec zsh
