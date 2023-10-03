@@ -22,7 +22,7 @@ color-modes = true
 text-width = 80
 
 [editor.statusline]
-left = ["mode", "spacer", "spinner", "diagnostics"]
+left = ["mode", "spacer", "spinner", "spacer", "diagnostics"]
 center = ["file-name"]
 right = ["position", "spacer"]
 mode.normal = "N"
@@ -52,3 +52,30 @@ ignore = true
 git-ignore = true
 git-global = true
 git-exclude = true
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'`' = '`'
+'"' = '"'
+"'" = "'"
+
+[editor.search]
+smart-case = true
+wrap-around = true
+
+[editor.whitespace]
+render = "none"
+
+[editor.indent-guides]
+render = false
+
+[editor.gutters]
+layout = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+
+[editor.gutters.line-numbers]
+min-width = 3
+
+[editor.soft-wrap]
+enable = false
