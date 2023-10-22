@@ -1,7 +1,7 @@
 # Dotfiles for a WSL Installation of Arch Linux
 everything is tty based
 
-To install my dotfiles `sudo` and `git` are required. You also have to be able to use `sudo` (probably by part of the wheel group).
+To install my dotfiles `sudo` and `git` are required. You also have to be able to use `sudo` (probably by being part of the wheel group).
 At the moment only Arch Linux is supported.
 
 Run the following command:
