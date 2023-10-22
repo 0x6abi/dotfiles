@@ -14,4 +14,4 @@ gnupg
 stow
 ripgrep
 fd
-clangd
+clang
