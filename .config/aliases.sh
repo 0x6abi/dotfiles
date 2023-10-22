@@ -22,5 +22,8 @@ alias egrep='egrep --color=always'
 alias fgrep='fgrep --color=always'
 alias rg='rg --color=always'
 
+# maven should always load the config file
+alias mvn='mvn -gs "$XDG_CONFIG_HOME/maven/settings.xml"'
+
 #dotfiles
 alias dots='cd ~/projects && stow dotfiles && cd - &> /dev/null'
