@@ -69,13 +69,12 @@ stty stop undef
 stty start undef
 
 ### plugins ###
-plugin_dir='/usr/share/zsh/plugins'
-source "$plugin_dir/zsh-autosuggestions/zsh-autosuggestions.zsh"
-source "$plugin_dir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-source "$plugin_dir/zsh-autopair/autopair.zsh"
-source '/usr/share/fzf/completion.zsh'
-source '/usr/share/fzf/key-bindings.zsh'
-source "${XDG_CONFIG_HOME:-$HOME/.config}/aliases.sh"
+[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
+plug "zsh-users/zsh-syntax-highlighting"
+plug "zap-zsh/fzf"
+plug "hlissner/zsh-autopair"
+plug "${XDG_CONFIG_HOME:-$HOME/.config}/aliases.sh"
+plug "zsh-users/zsh-autosuggestions"
 
 # starship prompt
 eval "$(starship init zsh)"
