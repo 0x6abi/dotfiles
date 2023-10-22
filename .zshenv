@@ -26,7 +26,7 @@ export SAVEHIST="${HISTSIZE:-5000}"
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # add scripts to path
-export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':' -)"
+export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:${CARGO_HOME:-$HOME/.local/share/cargo}/bin"
 export PATH="$PATH:${XDG_DATA_HOME:-$HOME/.local/share}/npm/bin"
 
