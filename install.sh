@@ -13,7 +13,7 @@ sudo pacman -S $(cat pkgs.txt) --noconfirm --needed
 git clone https://aur.archlinux.org/aura-bin.git ~/aura-bin
 cd ~/aura-bin
 makepkg
-sudo pacman -U aura-*-x86_64.tar.gz
+sudo pacman -U aura-*-x86_64.pkg.tar.zst --noconfirm
 cd ~/projects/dotfiles
 rm ~/aura-bin -rf
 
@@ -34,8 +34,8 @@ touch ~/.local/share/zsh/history
 # symlink config files
 cd ~/projects && stow dotfiles && cd ~
 
-# change shell to zsh
-chsh -s /usr/bin/zsh
+# rm bash files from $HOME
+rm .bash* -rf
 
 # install bashls through zsh to ensure correct envs are loaded
 zsh -c "npm i -g bash-language-server"
@@ -43,6 +43,8 @@ zsh -c "npm i -g bash-language-server"
 # install rust toolchain including rust-analyzer, the rust lsp
 zsh -c "rustup install stable"
 
-echo "installation complete"
-# clear
+# change shell to zsh
+chsh -s /usr/bin/zsh
+
+clear
 exec zsh
