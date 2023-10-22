@@ -1,0 +1,17 @@
+helix
+starship
+zsh
+zsh-syntax-highlighting
+zsh-completions
+zsh-autosuggestions
+rustup
+taplo
+zoxide
+base-devel
+maven
+npm
+gnupg
+stow
+ripgrep
+fd
+clangd
