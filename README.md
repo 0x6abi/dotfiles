@@ -2,7 +2,7 @@
 My primary code editor is [AstroNvim](https://github.com/AstroNvim/AstroNvim) with the Neovide GUI
 
 To install my dotfiles `sudo` and `git` are required. You also have to be able to use `sudo` (probably by being part of the wheel group).
-At the moment only Arch Linux is supported.
+The package names are from Fedora Workstation.
 
 Run the following command:
 ```bash
