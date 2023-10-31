@@ -1,0 +1,56 @@
+icons_format = "{icon}"
+
+[theme]
+theme = "plain"
+[theme.overrides]
+idle_bg = "#ebbcba"
+idle_fg = "#191724"
+good_bg = "#9ccfd8"
+good_fg = "#191724"
+warning_bg = "#f6c177"
+warning_fg = "#191724"
+critical_bg = "#eb6f92"
+critical_fg = "#191724"
+info_bg = "#e0def4"
+info_fg = "#191724"
+separator = "native"
+alternating_tint_bg = "none"
+alternating_tint_fg = "none"
+
+
+[icons]
+icons = "material-nf"
+
+[[block]]
+block = "battery"
+
+[[block]]
+block = "sound"
+show_volume_when_muted = true
+max_vol = 100
+[block.theme_overrides]
+idle_bg = "#31748f"
+[[block.click]]
+button = "left"
+cmd = "pamixer -t"
+
+[[block]]
+block = "backlight"
+[block.theme_overrides]
+idle_bg = "#c4a7e7"
+
+[[block]]
+block = "net"
+format = " $icon $ssid "
+[[block.click]]
+button = "left"
+cmd = "nm-connection-editor"
+
+
+[[block]]
+block = "time"
+interval = 5
+format = " $timestamp.datetime(f:'%R') "
+[block.theme_overrides]
+idle_bg = "#eb6f92"
+
