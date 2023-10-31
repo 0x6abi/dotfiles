@@ -2,7 +2,6 @@
 
 # stuff i use all the time
 alias v='nvim'
-alias nv='neovide'
 alias g='git'
 alias c='cargo'
 alias zat='zathura --fork'
