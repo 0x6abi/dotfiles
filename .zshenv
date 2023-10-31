@@ -18,13 +18,13 @@ export RUSTUP_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/rustup"
 export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/npm/npmrc"
 export ZDOTDIR="${XDG_CONFIG_DIR:-$HOME/.config}/zsh"
 export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
+export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/pass"
 
 # zsh variables
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh/history"
 export HISTSIZE=5000
 export SAVESIZE="${HISTSIZE:-5000}"
 export SAVEHIST="${HISTSIZE:-5000}"
-export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # add scripts to path
 export PATH="$PATH:$HOME/.local/bin"
