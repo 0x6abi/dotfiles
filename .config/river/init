@@ -20,6 +20,9 @@ riverctl spawn "i3bar-river"
 riverctl map normal Super+Shift Return spawn footclient
 riverctl map normal Super P            spawn fuzzel
 
+# open passmenu
+riverctl map normal Super+Shift P      spawn passmenu
+
 # Super+Q to close the focused view
 riverctl map normal Super+Shift Q close
 

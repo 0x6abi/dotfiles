@@ -27,5 +27,5 @@ export SAVESIZE="${HISTSIZE:-5000}"
 export SAVEHIST="${HISTSIZE:-5000}"
 
 # add scripts to path
-export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:${CARGO_HOME:-$HOME/.local/share/cargo}/bin"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="${CARGO_HOME:-$HOME/.local/share/cargo}/bin:$PATH"

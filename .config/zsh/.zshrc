@@ -83,6 +83,11 @@ export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 # set correct gpg pinentry
 export GPG_TTY=$(tty)
 
+# start ssh-agent if in wayland session
+if [[ ${+WAYLAND_DISPLAY} ]]; then
+	eval "$(keychain --absolute --dir "$XDG_RUNTIME_DIR"/keychain -q --eval id_ed25519)"
+fi
+
 # starship prompt
 eval "$(starship init zsh)"
 
