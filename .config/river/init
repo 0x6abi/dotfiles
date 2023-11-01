@@ -11,16 +11,17 @@
 
 # run programs on startup
 # use foot server for smaller memory footprint
-foot --server &
 
 # spawn programs on startup
 riverctl spawn "i3bar-river"
+riverctl spawn "foot --server"
+riverctl spawn "swaybg -m fill -i $HOME/pics/saved_pics/wallpapers/2602282-1529757983.jpg"
 
 # Super+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
 riverctl map normal Super+Shift Return spawn footclient
-riverctl map normal Super P            spawn fuzzel
 
-# open passmenu
+# Open the menu with P
+riverctl map normal Super P            spawn bemenu-run
 riverctl map normal Super+Shift P      spawn passmenu
 
 # Super+Q to close the focused view
@@ -150,9 +151,8 @@ do
 done
 
 # Set background and border color
-riverctl background-color 0x1f1d2e
-riverctl border-color-focused 0xf6c177
-riverctl border-color-unfocused 0x6e6a86
+riverctl border-color-focused 0xdca561
+riverctl border-color-unfocused 0x54546d
 
 # keyboard options
 riverctl set-repeat 50 300
@@ -170,4 +170,4 @@ riverctl hide-cursor when-typing enabled
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
-rivertile -view-padding 6 -outer-padding 6 &
+rivertile -view-padding 3 -outer-padding 3 &
