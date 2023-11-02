@@ -10,7 +10,7 @@ return {
 		conceallevel = 2, -- conceal Markdown formatters
 		swapfile = false,
 		undofile = true,
-		cursorcolumn = false,
+		cursorline = false,
 	},
 	g = {
 		mapleader = " ", -- sets vim.g.mapleader
