@@ -44,7 +44,7 @@ block = "net"
 format = " $icon $ssid "
 [[block.click]]
 button = "left"
-cmd = "nmtui"
+cmd = "nm-connection-editor"
 
 
 [[block]]
