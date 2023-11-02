@@ -7,7 +7,7 @@
 suppress_default_binds = true
 
 overlay = true
-overlay_font = Iosevka:24
+overlay_font = FiraCode Nerd Font:24
 overlay_text = "$(basename "$imv_current_file")" $imv_width x $imv_height
 
 [aliases]
