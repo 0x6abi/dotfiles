@@ -52,4 +52,4 @@ export BEMENU_OPTS="-i \
   --sf #dcd7ba \
   --ab #1f1f28 \
   --af #dcd7ba \
-  --fn 'FiraCode Nerd Font' 20"
+  --fn 'Mononoki Nerd Font' 20"
