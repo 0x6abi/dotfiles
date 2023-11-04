@@ -17,7 +17,6 @@ separator = "native"
 alternating_tint_bg = "none"
 alternating_tint_fg = "none"
 
-
 [icons]
 icons = "material-nf"
 
@@ -30,6 +29,9 @@ show_volume_when_muted = true
 max_vol = 100
 [block.theme_overrides]
 idle_bg = "#7e9cd8"
+[block.icons_overrides]
+volume_muted = ""
+volume = ""
 [[block.click]]
 button = "left"
 cmd = "pamixer -t"
@@ -38,6 +40,8 @@ cmd = "pamixer -t"
 block = "backlight"
 [block.theme_overrides]
 idle_bg = "#98bb6c"
+[block.icons_overrides]
+backlight = "󰃞"
 
 [[block]]
 block = "net"
