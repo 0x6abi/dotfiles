@@ -1,0 +1,31 @@
+#!/bin/sh
+
+actions='poweroff,reboot,suspend,lock'
+delim=','
+
+case "$1" in
+  'poweroff'|'p'|'off')
+    echo 'poweroff...'
+    systemctl poweroff
+    ;;
+  'reboot'|'r')
+    echo 'reboot...'
+    systemctl reboot
+    ;;
+  'suspend'|'s'|'zzz')
+    echo 'suspend...'
+    systemctl suspend
+    ;;
+  'lock'|'l')
+    echo 'lock...'
+    waylock -fork-on-lock -init-color 0x1f1f28 -input-color 0x957fb8 -fail-color 0xe82424
+    ;;
+  'bemenu')
+    action=$(echo "$actions" | tr $delim '\n' | bemenu -p 'power: ')
+    pwr "$action"
+    ;;
+  *)
+    echo "USAGE: pwr <$(echo "$actions" | tr $delim '|')>"
+    echo '       pwr bemenu   | select an option using bemenu'
+    ;;
+esac

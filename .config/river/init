@@ -25,8 +25,8 @@ riverctl map normal Super+Shift Return spawn footclient
 riverctl map normal Super P            spawn bemenu-run
 riverctl map normal Super+Shift P      spawn passmenu
 
-# lock the screen with Super+C
-riverctl map normal Super C spawn "waylock -fork-on-lock -init-color 0x1f1f28 -input-color 0x957fb8 -fail-color 0xe82424"
+# power management with Super+C
+riverctl map normal Super C spawn "pwr bemenu"
 
 # Super+Q to close the focused view
 riverctl map normal Super+Shift Q close
