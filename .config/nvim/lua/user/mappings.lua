@@ -22,6 +22,13 @@ return {
       desc = "Previous buffer",
     },
 
+    ["<leader>fp"] = {
+      function()
+        vim.cmd([[Telescope projects]])
+      end,
+      desc = "Open projects",
+    },
+
     -- mappings seen under group name 'Buffer'
     ["<leader>bD"] = {
       function()
