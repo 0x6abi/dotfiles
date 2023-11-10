@@ -1,3 +1,2 @@
-aura-bin
 i3bar-river
 zsh-autopair-git
