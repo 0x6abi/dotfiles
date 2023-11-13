@@ -24,6 +24,3 @@ alias rg='rg --color=always'
 
 # dotfiles
 alias dots='cd ~/.dots && stow . && cd - &> /dev/null'
-
-# latex document
-alias new_doc="cp ~/templates/latex/*.tex $PWD"
