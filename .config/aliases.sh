@@ -24,3 +24,7 @@ alias rg='rg --color=always'
 
 # dotfiles
 alias dots='cd ~/.dots && stow . && cd - &> /dev/null'
+
+# calcurse
+alias today='calcurse -a'
+alias todo='calcurse -t'
