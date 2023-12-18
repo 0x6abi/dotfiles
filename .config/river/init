@@ -15,28 +15,23 @@ rfkill block bluetooth
 # notification demon
 riverctl spawn mako
 
+# wallpaper
+riverctl spawn "swaybg -m fill -i $XDG_CONFIG_HOME/swaybg/wallpaper.jpg"
+
 # spawn wob (display volume, brightness)
 WOBSOCK=$XDG_RUNTIME_DIR/wob.sock
 rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob &
 
 # tags
-riverctl spawn "river-tag-overlay --border-width 1 --tag-amount 5 \
-    --tags-per-row 5 --square-size 20 --square-inner-padding 5 \
-    --square-padding 0 --background-colour 0xff0000 --border-colour 0xdcd7ba \
-    --square-active-background-colour 0xd27e99 --square-active-border-colour 0xd27e99 \
-    --square-active-occupied-colour 0x1f1f28 --square-inactive-background-colour 0x1f1f28 \
-    --square-inactive-border-colour 0x1f1f28 --square-inactive-occupied-colour 0xd27e99"
+riverctl spawn tag-overlay
 
 # run programs on startup
 # use foot server for smaller memory footprint
-riverctl spawn "foot --server"
 # idle management
-riverctl spawn "swayidle -w timeout 300 'waylock -fork-on-lock -init-color 0x1f1f28 \
-    -input-color 0x957fb8 -fail-color 0xe82424' timeout 600 'systemctl suspend' \
-    before-sleep 'waylock -fork-on-lock -init-color 0x1f1f28 -input-color 0x957fb8 -fail-color 0xe82424'"
+riverctl spawn idle-manager
 
-# Super+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
-riverctl map normal Super+Shift Return spawn "footclient"
+# Super+Shift+Return to start an instance of alacritty
+riverctl map normal Super+Shift Return spawn "alacritty"
 
 # Open the menu with Super+(Shift+)P
 riverctl map normal Super P            spawn fuzzel
@@ -177,7 +172,7 @@ done
 # Set background and border stuff
 riverctl background-color 0x1f1f28
 riverctl border-width 1
-riverctl border-color-focused 0xd27e99
+riverctl border-color-focused 0xdca561
 riverctl border-color-unfocused 0x1f1f28
 riverctl border-color-urgent 0xe82424
 
@@ -185,16 +180,14 @@ riverctl border-color-urgent 0xe82424
 riverctl set-repeat 50 300
 riverctl keyboard-layout -options "caps:swapescape,compose:ralt" us
 
+touchpad='pointer-2362-628-PIXA3854:00_093A:0274_Touchpad'
 
 # cursor options
 riverctl hide-cursor timeout 5000
 riverctl hide-cursor when-typing enabled
-
-# Make certain views start floating
-
-# Set app-ids and titles of views which should use client side decorations
+riverctl input $touchpad natural-scroll enabled
 
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
-rivertile -view-padding 0 -outer-padding 0 &
+rivertile -view-padding 4 -outer-padding 4 &
