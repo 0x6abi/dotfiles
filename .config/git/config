@@ -2,7 +2,7 @@
 	pager = less
 	editor = nvim
 [user]
-	email = 144284968+ninikx@users.noreply.github.com
+	email = gabriel@nagelmichaelsen.de
 	name = gabi
 	signingkey = 0859C9B83682679391FEE781514EDDC0C832C81E
 [alias]
