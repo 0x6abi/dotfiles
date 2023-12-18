@@ -23,7 +23,5 @@
 	rebase = false
 [commit]
 	gpgsign = true
-[credential]
-	helper = libsecret
 [push]
 	autoSetupRemote = true
