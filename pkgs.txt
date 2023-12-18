@@ -19,6 +19,7 @@ imv
 jq
 kanshi
 kwayland5
+libreoffice-fresh
 libsixel
 libva-mesa-driver
 linux
@@ -94,6 +95,7 @@ udisks2
 waylock
 wireplumber
 wl-clipboard
+wmctrl
 xdg-user-dirs
 yt-dlp
 zathura
