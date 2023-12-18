@@ -11,18 +11,22 @@
 
 # run programs on startup
 # use foot server for smaller memory footprint
-
-# spawn programs on startup
-riverctl spawn "i3bar-river"
 riverctl spawn "foot --server"
+# status bar
+riverctl spawn "i3bar-river"
 riverctl spawn "swaybg -m fill -i ${XDG_CONFIG_HOME:-$HOME/.config}/river/wallpaper.jpg"
+# idle management
+riverctl spawn "swayidle -w timeout 60 'waylock -fork-on-lock -init-color 0x1f1f28 -input-color 0x957fb8 -fail-color 0xe82424' timeout 300 'systemctl suspend' before-sleep 'waylock -fork-on-lock -init-color 0x1f1f28 -input-color 0x957fb8 -fail-color 0xe82424'"
 
 # Super+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
 riverctl map normal Super+Shift Return spawn footclient
 
-# Open the menu with P
+# Open the menu with Super+(Shift+)P
 riverctl map normal Super P            spawn bemenu-run
 riverctl map normal Super+Shift P      spawn passmenu
+
+# lock the screen with Super+C
+riverctl map normal Super C spawn "waylock -fork-on-lock -init-color 0x1f1f28 -input-color 0x957fb8 -fail-color 0xe82424"
 
 # Super+Q to close the focused view
 riverctl map normal Super+Shift Q close
