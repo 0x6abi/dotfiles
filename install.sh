@@ -1,9 +1,8 @@
 #!/bin/sh
 
 # pull the git repo with config files
-mkdir -p ~/projects
-git clone https://github.com/ninikx/dotfiles.git ~/projects/dotfiles
-cd ~/projects/dotfiles
+git clone https://github.com/ninikx/dotfiles.git ~/dotfiles
+cd ~/dotfiles
 
 # install official packages
 sudo pacman -Syu
@@ -14,7 +13,7 @@ git clone https://aur.archlinux.org/aura-bin.git ~/aura-bin
 cd ~/aura-bin
 makepkg
 sudo pacman -U aura-*-x86_64.pkg.tar.zst --noconfirm
-cd ~/projects/dotfiles
+cd ~/dotfiles
 rm ~/aura-bin -rf
 
 # install AUR packages
@@ -32,7 +31,7 @@ mkdir -p ~/.local/share/zsh
 touch ~/.local/share/zsh/history
 
 # symlink config files
-cd ~/projects && stow dotfiles && cd ~
+cd ~/dotfiles && stow . && cd ~
 
 # rm bash files from $HOME
 rm .bash* -rf
