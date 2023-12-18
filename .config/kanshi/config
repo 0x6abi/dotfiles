@@ -1,4 +1,9 @@
 profile desk {
-    output DP-2 mode 1920x1080@71.910004Hz position 0,0
-    output eDP-1 position 0,1080
+    output DP-2 mode 1920x1080 position 0,0
+    output eDP-1 enable position 0,1081
+}
+
+profile watch {
+    output DP-2 mode 1920x1080 position 0,0
+    output eDP-1 disable
 }

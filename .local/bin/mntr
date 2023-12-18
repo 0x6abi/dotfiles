@@ -1,0 +1,6 @@
+#!/bin/sh
+
+profiles=`cat $XDG_CONFIG_HOME/kanshi/config | sed -n -e 's/^.*profile //; s/.{$//p'`
+profile=$(echo "$profiles" | tr ' ' '\n' | fuzzel -d -p 'monitor layout: ')
+kanshictl reload
+kanshictl switch "$profile"

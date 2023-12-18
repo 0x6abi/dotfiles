@@ -37,6 +37,9 @@ riverctl map normal Super B            spawn qutebrowser
 # power management
 riverctl map normal Super C            spawn "pwr fuzzel"
 
+# monitor layouts
+riverctl map normal Super M            spawn mntr
+
 # Super+Shift+Q to close the focused view
 riverctl map normal Super+Shift Q close
 
