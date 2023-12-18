@@ -1,0 +1,5 @@
+#!/bin/sh
+
+swayidle -w timeout 300 'waylock -fork-on-lock -init-color 0x1f1f28 \
+    -input-color 0xdca561 -fail-color 0xe82424' timeout 600 'systemctl suspend' \
+    before-sleep 'waylock -fork-on-lock -init-color 0x1f1f28 -input-color 0xdca561 -fail-color 0xe82424'
