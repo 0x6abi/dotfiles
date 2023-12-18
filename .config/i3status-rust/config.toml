@@ -44,12 +44,6 @@ idle_bg = "#98bb6c"
 backlight = "󰃞"
 
 [[block]]
-block = "bluetooth"
-mac = "7C:9A:1D:A1:DD:2E"
-disconnected_format = ""
-format = " $icon $name "
-
-[[block]]
 block = "custom"
 cycle = ["blt", "blt"]
 interval = "once"
