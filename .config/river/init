@@ -104,7 +104,7 @@ riverctl map-pointer normal Super BTN_RIGHT resize-view
 # Super + Middle Mouse Button to toggle float
 riverctl map-pointer normal Super BTN_MIDDLE toggle-float
 
-for i in $(seq 1 5)
+for i in $(seq 1 9)
 do
     tags=$((1 << ($i - 1)))
 
@@ -170,9 +170,8 @@ do
 done
 
 # Set background and border stuff
-riverctl background-color 0x1f1f28
 riverctl border-width 1
-riverctl border-color-focused 0xdca561
+riverctl border-color-focused 0xdcd7ba
 riverctl border-color-unfocused 0x1f1f28
 riverctl border-color-urgent 0xe82424
 

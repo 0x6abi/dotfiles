@@ -1,8 +1,8 @@
 #!/bin/sh
 
-river-tag-overlay --border-width 1 --tag-amount 5 \
-    --tags-per-row 5 --square-size 20 --square-inner-padding 5 \
+river-tag-overlay --border-width 1 --square-size 20 --square-inner-padding 5 \
     --square-padding 0 --background-colour 0xff0000 --border-colour 0xdcd7ba \
     --square-active-background-colour 0xdca561 --square-active-border-colour 0xdca561 \
     --square-active-occupied-colour 0x1f1f28 --square-inactive-background-colour 0x1f1f28 \
-    --square-inactive-border-colour 0x1f1f28 --square-inactive-occupied-colour 0xdca561
+    --square-inactive-border-colour 0x1f1f28 --square-inactive-occupied-colour 0xdca561 \
+    --anchors 1:0:0:0 --margins 8:0:0:0
