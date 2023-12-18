@@ -10,23 +10,33 @@
 # Note: the "Super" modifier is also known as Logo, GUI, Windows, Mod4, etc.
 
 # disable bluetooth controller by default to save battery
-bluetoothctl power off
+rfkill block bluetooth
+
+# tags
+riverctl spawn "river-tag-overlay --border-width 1 --tag-amount 5 \
+    --tags-per-row 5 --square-size 20 --square-inner-padding 5 \
+    --square-padding 0 --background-colour 0xff0000 --border-colour 0xdcd7ba \
+    --square-active-background-colour 0xd27e99 --square-active-border-colour 0xd27e99 \
+    --square-active-occupied-colour 0x1f1f28 --square-inactive-background-colour 0x1f1f28 \
+    --square-inactive-border-colour 0x1f1f28 --square-inactive-occupied-colour 0xd27e99"
 
 # run programs on startup
 # use foot server for smaller memory footprint
 riverctl spawn "foot --server"
-# status bar
-riverctl spawn "i3bar-river"
-riverctl spawn "swaybg -m fill -i ${XDG_CONFIG_HOME:-$HOME/.config}/river/wallpaper.jpg"
 # idle management
-riverctl spawn "swayidle -w timeout 300 'waylock -fork-on-lock -init-color 0x1f1f28 -input-color 0x957fb8 -fail-color 0xe82424' timeout 600 'systemctl suspend' before-sleep 'waylock -fork-on-lock -init-color 0x1f1f28 -input-color 0x957fb8 -fail-color 0xe82424'"
+riverctl spawn "swayidle -w timeout 300 'waylock -fork-on-lock -init-color 0x1f1f28 \
+    -input-color 0x957fb8 -fail-color 0xe82424' timeout 600 'systemctl suspend' \
+    before-sleep 'waylock -fork-on-lock -init-color 0x1f1f28 -input-color 0x957fb8 -fail-color 0xe82424'"
 
 # Super+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
-riverctl map normal Super+Shift Return spawn footclient
+riverctl map normal Super+Shift Return spawn "footclient"
 
 # Open the menu with Super+(Shift+)P
 riverctl map normal Super P            spawn fuzzel
 riverctl map normal Super+Shift P      spawn passmenu
+
+# open browser
+riverctl map normal Super B            spawn qutebrowser
 
 # power management with Super+C
 riverctl map normal Super C spawn "pwr fuzzel"
@@ -157,9 +167,12 @@ do
     riverctl map $mode None XF86MonBrightnessDown spawn 'xbacklight -dec 5'
 done
 
-# Set background and border color
-riverctl border-color-focused 0xdca561
-riverctl border-color-unfocused 0x54546d
+# Set background and border stuff
+riverctl background-color 0xd27e99
+riverctl border-width 1
+riverctl border-color-focused 0xdcd7ba
+riverctl border-color-unfocused 0xd27e99
+riverctl border-color-urgent 0xe82424
 
 # keyboard options
 riverctl set-repeat 50 300
@@ -177,4 +190,4 @@ riverctl hide-cursor when-typing enabled
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
-rivertile -view-padding 3 -outer-padding 3 &
+rivertile -view-padding 2 -outer-padding 2 &

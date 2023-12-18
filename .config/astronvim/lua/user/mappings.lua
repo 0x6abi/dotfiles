@@ -8,6 +8,32 @@ return {
 	n = {
 		-- second key is the lefthand side of the map
 
+		-- navigate open buffers and tmux panes alike
+		["<C-h>"] = {
+			function()
+				vim.cmd("TmuxNavigateLeft")
+			end,
+			desc = "window right",
+		},
+		["<C-j>"] = {
+			function()
+				vim.cmd("TmuxNavigateDown")
+			end,
+			desc = "window right",
+		},
+		["<C-k>"] = {
+			function()
+				vim.cmd("TmuxNavigateUp")
+			end,
+			desc = "window right",
+		},
+		["<C-l>"] = {
+			function()
+				vim.cmd("TmuxNavigateRight")
+			end,
+			desc = "window right",
+		},
+
 		-- navigate buffer tabs with `H` and `L`
 		L = {
 			function()
