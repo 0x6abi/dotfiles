@@ -17,7 +17,7 @@ setopt rmstarsilent
 setopt no_beep extended_glob glob_dots aliases correct complete_in_word
 
 # initialize completion
-autoload -Uz compinit && compinit -d "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/compdumb"
+autoload -Uz compinit && compinit -d "$XDG_CACHE_HOME/zsh/compdumb"
 zmodload zsh/complist
 
 # case insensitive matching
@@ -75,7 +75,7 @@ source "$plugin_dir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$plugin_dir/zsh-autopair/autopair.zsh"
 source '/usr/share/fzf/completion.zsh'
 source '/usr/share/fzf/key-bindings.zsh'
-source "${XDG_CONFIG_HOME:-$HOME/.config}/aliases.sh"
+source "$XDG_CONFIG_HOME/aliases.sh"
 
 # does not work for some reason in .zshenv; probably gets overwritten by the plugin
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
