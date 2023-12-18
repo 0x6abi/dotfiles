@@ -1,37 +1,13 @@
 #!/bin/sh
 
 if [[ `ls /sys/class/power_supply/BAT* 2> /dev/null | wc -l` != "0" ]]; then
-    charge=`cat /sys/class/power_supply/BAT1/capacity`
-    icon='󰁹'
-    full=0
-    if [[ $charge -gt 98 ]]; then
-        charge=''
-        full=1
-    elif [[ $charge -gt 90 ]]; then
-        icon='󰂂'
-    elif [[ $charge -gt 80 ]]; then
-        icon='󰂁'
-    elif [[ $charge -gt 70 ]]; then
-        icon='󰂀'
-    elif [[ $charge -gt 60 ]]; then
-        icon='󰁿'
-    elif [[ $charge -gt 50 ]]; then
-        icon='󰁾'
-    elif [[ $charge -gt 40 ]]; then
-        icon='󰁽'
-    elif [[ $charge -gt 30 ]]; then
-        icon='󰁼'
-    else
-        icon='󰂃'
-    fi
+    charge="`cat /sys/class/power_supply/BAT1/capacity`%"
+    text='Bat'
     if [[ ! `cat /sys/class/power_supply/BAT1/status | grep -E 'Not Charging|Discharging'` ]]; then
-        icon='󰂄'
+        text=$text"(Charging)"
     fi
-    if [[ full -eq 0 ]]; then
-        charge=$charge"%" 
-        icon="$icon "
-    fi
-    echo "$icon$charge"
+    text="$text:"
+    echo "$text$charge"
 else
     echo "0"
 fi
