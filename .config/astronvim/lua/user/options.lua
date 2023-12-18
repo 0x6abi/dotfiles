@@ -12,6 +12,7 @@ return {
 		undofile = true,
 		shiftwidth = 4,
 		tabstop = 4,
+		title = true,
 	},
 	g = {
 		mapleader = " ", -- sets vim.g.mapleader
