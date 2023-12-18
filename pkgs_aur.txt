@@ -1,5 +1,12 @@
-i3bar-river
-mpdris2
-qt6-webengine-widevide
-wlr-randr
-zsh-autopair-git
+ghcup-hs-bin 0.1.20.0-1
+jetbrains-toolbox 2.1.1.18388-1
+mpdris2 0.9.1-1
+paru-bin 2.0.1-1
+puddletag 2.2.0-2
+python-spotdl 4.2.4-1
+python-syncedlyrics 0.7.0-1
+qt6-webengine-widevine 112.0.5615.49-1
+river-tag-overlay-git r39.791eaad-1
+wlr-randr 0.3.1-1
+wob 0.15.1-1
+zsh-autopair-git 1.0.r3.g396c38a-1
