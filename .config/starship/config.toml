@@ -1,46 +1,43 @@
-format = """
-$username\
-$hostname\
-$directory\
-$git_branch\
-$git_status\
-$cmd_duration\
-$line_break\
-$status\
-$character"""
+'$schema' = 'https://starship.rs/config-schema.json'
+
+format = '$character$directory$git_branch$git_status'
+
+right_format = '$battery$time'
+
+[battery]
+format = '[$percentage]($style) '
+disabled = false
+
+[[battery.display]]
+threshold = 101
+style = 'cyan'
+
+[time]
+time_format = '%H:%M'
+format = 'at [$time]($style)'
+style = 'bold purple'
+disabled = false
 
 [directory]
-style = "blue"
-read_only = " [RO] "
-truncate_to_repo = true
+style = 'white'
+truncation_length = 1
+read_only = ' [RO]'
 
 [character]
-success_symbol = "[%](bold green)"
-error_symbol = "[%](bold red)"
-vimcmd_symbol = "[%](bold yellow)"
-
-[status]
-disabled = false
-format = "[$status](bold red) "
+success_symbol = '[λ](yellow)'
+error_symbol = '[λ](bold red)'
+vimcmd_symbol = '[∆](yellow)'
 
 [git_branch]
-format = "[$branch]($style)"
-style = "bright-black"
+format = "[\\(](blue)[$branch]($style)[\\)](blue)"
+style = 'red'
 
 [git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted$stashed$ahead_behind)](218)]($style) "
-style = "cyan"
-conflicted = "​"
-untracked = "​"
-modified = "​"
-staged = "​"
-renamed = "​"
-deleted = "​"
-stashed = "​"
-ahead = "​"
-behind = "​"
-diverged = "​"
-
-[cmd_duration]
-format = "[$duration]($style) "
-style = "yellow"
+format = '[($conflicted$untracked$modified$staged$renamed$deleted)]($style) '
+style = 'red'
+conflicted = '​'
+untracked = '​'
+modified = '​'
+staged = '​'
+renamed = '​'
+deleted = '​'
