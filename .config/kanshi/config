@@ -7,3 +7,7 @@ profile watch {
     output DP-2 mode 1920x1080 position 0,0
     output eDP-1 disable
 }
+
+profile default {
+    output eDP-1 enable
+}
