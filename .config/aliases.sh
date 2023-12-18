@@ -2,7 +2,7 @@
 
 # stuff i use all the time
 alias v='nvim'
-alias hx='helix'
+alias nv='neovide'
 alias g='git'
 alias c='cargo'
 
@@ -22,8 +22,5 @@ alias egrep='egrep --color=always'
 alias fgrep='fgrep --color=always'
 alias rg='rg --color=always'
 
-# maven should always load the config file
-alias mvn='mvn -gs "$XDG_CONFIG_HOME/maven/settings.xml"'
-
 #dotfiles
-alias dots='cd ~/dotfiles && stow . && cd - &> /dev/null'
+alias dots='cd ~/.dots && stow . && cd - &> /dev/null'

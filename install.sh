@@ -1,49 +1,38 @@
 #!/bin/sh
 
 # pull the git repo with config files
-git clone https://github.com/ninikx/dotfiles.git ~/dotfiles
+git clone https://github.com/ninikx/dotfiles.git ~/.dots
 cd ~/dotfiles
 
-# install official packages
-sudo pacman -Syu
-sudo pacman -S $(cat pkgs.txt) --noconfirm --needed
+# install terra (repo which ships some pkgs i need)
+sudo dnf config-manager --add-repo https://terra.fyralabs.com/terra.repo
 
-# install AUR helper
-git clone https://aur.archlinux.org/aura-bin.git ~/aura-bin
-cd ~/aura-bin
-makepkg
-sudo pacman -U aura-*-x86_64.pkg.tar.zst --noconfirm
-cd ~/dotfiles
-rm ~/aura-bin -rf
+# install  packages
+sudo dnf upgrade
+sudo dnf install $(cat pkgs.txt) -y
 
 # clone astronvim
-git clone --depth=1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+git clone --depth=1 https://github.com/AstroNvim/AstroNvim "~/${XDG_CONFIG_HOME:-$HOME/.config}/nvim"
 
-# install AUR packages
-sudo aura -A $(cat pkgs_aur.txt) --noconfirm --needed
+# clone zap (zsh plugin manager)
+git clone --depth=1 https://zap-zsh/zap "~/${XDG_DATA_HOME:-$HOME/.local/share}/zap" -b release-v1
 
 # zsh does not create directories itself, so to ensure that zsh files get stored 
 # at the correct location, we'll have to manually create them
 
 # completion
-mkdir -p ~/.cache/zsh/
-touch ~/.cache/zsh/compdumb
+mkdir -p "~/${XDG_CACHE_HOME:-$HOME/.cache}/zsh/"
+touch "~/${XDG_CACHE_HOME:-$HOME/.cache}/zsh/compdumb"
 
 # history
-mkdir -p ~/.local/share/zsh
-touch ~/.local/share/zsh/history
+mkdir -p "~/${XDG_DATA_HOME/:-$HOME/.local/share}/zsh"
+touch "~/${XDG_DATA_HOME/:-$HOME/.local/share}/zsh/history"
 
 # symlink config files
-cd ~/dotfiles && stow . && cd ~
+cd ~/.dots && stow . && cd ~
 
 # rm bash files from $HOME
 rm .bash* -rf
-
-# install bashls through zsh to ensure correct envs are loaded
-zsh -c "npm i -g bash-language-server"
-
-# install rust toolchain including rust-analyzer, the rust lsp
-zsh -c "rustup install stable"
 
 # change shell to zsh
 chsh -s /usr/bin/zsh
