@@ -14,6 +14,10 @@ return {
     overrides = function(colors)
       local theme = colors.theme
       return {
+
+        -- only highlight line number
+        CursorLine = { bg = "none" },
+
         -- Transparent floating windows
         NormalFloat = { bg = "none" },
         FloatBorder = { bg = "none" },
