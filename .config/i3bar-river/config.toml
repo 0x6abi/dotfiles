@@ -1,8 +1,7 @@
 command = "i3status-rs"
 
 background = "#1f1f28"
-color = "#dcd7ba"
-tag_fg = "#e0def4"
+tag_fg = "#dcd7ba"
 tag_bg = "#1f1f28"
 tag_focused_fg = "#16161d"
 tag_focused_bg = "#957fb8"
