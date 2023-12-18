@@ -10,8 +10,10 @@ sudo pacman -S $(cat pkgs.txt) --noconfirm --needed
 
 # install the aur helper
 git clone https://aur.archlinux.org/aura-bin.git
-cd ~/paru-aura
+cd ~/aura-bin
 makepkg -si
+cd ~/.dots
+rm ~/aura-bin -rf
 
 # install aur packages
 sudo aura -A $(cat pkgs_aur.txt) --noconfirm --needed
