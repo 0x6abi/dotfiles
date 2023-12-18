@@ -15,9 +15,9 @@ read_only = " [RO] "
 truncate_to_repo = true
 
 [character]
-success_symbol = "[λ](bold green)"
-error_symbol = "[λ](bold red)"
-vimcmd_symbol = "[λ](bold yellow)"
+success_symbol = "[%](bold green)"
+error_symbol = "[%](bold red)"
+vimcmd_symbol = "[%](bold yellow)"
 
 [status]
 disabled = false
@@ -28,7 +28,7 @@ format = "[$branch]($style)"
 style = "bright-black"
 
 [git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218)($ahead_behind$stashed)]($style) "
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted$stashed$ahead_behind)](218)]($style) "
 style = "cyan"
 conflicted = "​"
 untracked = "​"
@@ -36,7 +36,10 @@ modified = "​"
 staged = "​"
 renamed = "​"
 deleted = "​"
-stashed = "≡"
+stashed = "​"
+ahead = "​"
+behind = "​"
+diverged = "​"
 
 [cmd_duration]
 format = "[$duration]($style) "

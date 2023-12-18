@@ -1,0 +1,8 @@
+{
+  "kanagawa.nvim": { "branch": "master", "commit": "c19b9023842697ec92caf72cd3599f7dd7be4456" },
+  "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
+  "mini.basics": { "branch": "main", "commit": "7a0e2783b7aa27e23c7a30f3d1600b2e94d8246f" },
+  "mini.statusline": { "branch": "main", "commit": "950d9029c7ed901b67c839e74478f784b7432665" },
+  "mini.tabline": { "branch": "main", "commit": "600b160ea38290de77467b0df9debbce00ea1fb3" },
+  "nvim-treesitter": { "branch": "master", "commit": "7b26b085880f5c99c9e6109c81ed3b08db90ce50" }
+}
