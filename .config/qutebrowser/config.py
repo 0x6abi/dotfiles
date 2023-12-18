@@ -16,8 +16,11 @@ c.completion.height = '30%'
 c.completion.min_chars = 1
 c.completion.quick = True
 
+c.editor.command = ["foot", "nvim", "{file}"]
+c.editor.remove_file = True
+
 # fonts
-c.fonts.completion.category = 'Mononoki Nerd Font'
-c.fonts.completion.entry = 'Mononoki Nerd Font'
-c.fonts.default_family = 'Mononoki Nerd Font'
+c.fonts.completion.category = 'Iosevka Fixed'
+c.fonts.completion.entry = 'Iosevka Fixed'
+c.fonts.default_family = 'Iosevka Fixed'
 c.fonts.default_size = '24px'
