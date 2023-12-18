@@ -20,7 +20,7 @@ c.editor.command = ["foot", "nvim", "{file}"]
 c.editor.remove_file = True
 
 # fonts
-c.fonts.completion.category = 'Iosevka Nerd Font'
-c.fonts.completion.entry = 'Iosevka Nerd Font'
-c.fonts.default_family = 'Iosevka Nerd Font'
-c.fonts.default_size = '24px'
+c.fonts.completion.category = 'Cascadia Code'
+c.fonts.completion.entry = 'Cascadia Code'
+c.fonts.default_family = 'Cascadia Code'
+c.fonts.default_size = '17px'

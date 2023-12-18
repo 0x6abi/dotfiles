@@ -7,7 +7,7 @@
 suppress_default_binds = true
 
 overlay = true
-overlay_font = Iosevka Nerd Font:24
+overlay_font = Cascadia Code:17
 overlay_text = "$(basename "$imv_current_file")" $imv_width x $imv_height
 
 [aliases]
@@ -18,7 +18,6 @@ overlay_text = "$(basename "$imv_current_file")" $imv_width x $imv_height
 [binds]
 # Define some key bindings
 q = quit
-y = exec echo working!
 
 # Image navigation
 <Left> = prev
