@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # stuff i use all the time
-# alias v='nvim'
+alias v='nvim'
 alias hx='helix'
 alias g='git'
 alias c='cargo'
