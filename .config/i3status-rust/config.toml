@@ -47,7 +47,15 @@ backlight = "󰃞"
 block = "bluetooth"
 mac = "7C:9A:1D:A1:DD:2E"
 disconnected_format = ""
-format = " $icon "
+format = " $icon $name "
+
+[[block]]
+block = "custom"
+cycle = ["blt", "blt"]
+interval = "once"
+[[block.click]]
+button = "left"
+action = "cycle"
 
 [[block]]
 block = "net"

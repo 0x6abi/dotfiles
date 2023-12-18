@@ -9,6 +9,9 @@
 # documentation.
 # Note: the "Super" modifier is also known as Logo, GUI, Windows, Mod4, etc.
 
+# disable bluetooth controller by default to save battery
+bluetoothctl power off
+
 # run programs on startup
 # use foot server for smaller memory footprint
 riverctl spawn "foot --server"

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if rfkill list bluetooth | rg -q 'yes$'; then
+    rfkill unblock bluetooth
+    echo "󰂯"
+else
+    rfkill block bluetooth
+    echo "󰂲"
+fi
