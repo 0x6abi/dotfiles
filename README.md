@@ -2,7 +2,7 @@
 
 Dotfiles for Arch Linux with riverwm, zsh, neovim, qutebrowser, and overall a vim-based workflow, with the beautiful kanagawa colorscheme.
 
-Only `git` and `sudo` privileges are required to install the dotfiles.
+Only `curl`, `git` and `sudo` privileges are required to install the dotfiles.
 Currently only compatible with Arch Linux (probably Arch-based Distros (as long as they use `systemd`) as well, I just didn't test it).
 
 Run the following command:
