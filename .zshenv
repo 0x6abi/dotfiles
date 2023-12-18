@@ -28,4 +28,25 @@ export SAVEHIST="${HISTSIZE:-5000}"
 
 # add scripts to path
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="${CARGO_HOME:-$HOME/.local/share/cargo}/bin:$PATH"
+export PATH="${CARGO_HOME:-${XDG_DATA_HOME:-$HOME/.local/share}/cargo}/bin:$PATH"
+
+# bemenu (dmenu for wayland) options
+export BEMENU_OPTS="-i \
+  -p run: \
+  -H 30 \
+  --ch 20 \
+  --cw 2 \
+  --hp 6 \
+  --tb #dcd7ba \
+  --tf #1f1f28 \
+  --fb #16161d \
+  --ff #c8c093 \
+  --nb #1f1f28 \
+  --nf #dcd7ba \
+  --hb #223249 \
+  --hf #dcd7ba \
+  --sb #2d4f67 \
+  --sf #dcd7ba \
+  --ab #1f1f28 \
+  --af #dcd7ba \
+  --fn Iosevka Regular 20"

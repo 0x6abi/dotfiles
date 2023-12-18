@@ -3,15 +3,15 @@ icons_format = "{icon}"
 [theme]
 theme = "plain"
 [theme.overrides]
-idle_bg = "#ebbcba"
-idle_fg = "#191724"
-good_bg = "#9ccfd8"
-good_fg = "#191724"
-warning_bg = "#f6c177"
-warning_fg = "#191724"
-critical_bg = "#eb6f92"
-critical_fg = "#191724"
-info_bg = "#e0def4"
+idle_bg = "#dca561"
+idle_fg = "#16161d"
+good_bg = "#76946a"
+good_fg = "#16161d"
+warning_bg = "#ff9e3b"
+warning_fg = "#16161d"
+critical_bg = "#e82424"
+critical_fg = "#16161d"
+info_bg = "#dcd7ba"
 info_fg = "#191724"
 separator = "native"
 alternating_tint_bg = "none"
@@ -29,7 +29,7 @@ block = "sound"
 show_volume_when_muted = true
 max_vol = 100
 [block.theme_overrides]
-idle_bg = "#31748f"
+idle_bg = "#7e9cd8"
 [[block.click]]
 button = "left"
 cmd = "pamixer -t"
@@ -37,14 +37,14 @@ cmd = "pamixer -t"
 [[block]]
 block = "backlight"
 [block.theme_overrides]
-idle_bg = "#c4a7e7"
+idle_bg = "#98bb6c"
 
 [[block]]
 block = "net"
 format = " $icon $ssid "
 [[block.click]]
 button = "left"
-cmd = "nm-connection-editor"
+cmd = "nmtui"
 
 
 [[block]]
@@ -52,5 +52,5 @@ block = "time"
 interval = 5
 format = " $timestamp.datetime(f:'%R') "
 [block.theme_overrides]
-idle_bg = "#eb6f92"
+idle_bg = "#e46876"
 

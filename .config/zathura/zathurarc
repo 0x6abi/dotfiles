@@ -1,0 +1,29 @@
+set highlight-color "#2d4f67"
+set highlight-fg "#dcd7ba"
+set highlight-active-color "#e46876"
+set recolor true
+set recolor-darkcolor "#dcd7ba"
+set recolor-lightcolor "#1f1f28"
+# set recolor-reverse-video true
+set render-loading false
+set statusbar-home-tilde true
+
+set completion-bg "#1f1f28"
+set completion-fg "#dcd7ba"
+set completion-group-bg "#363646"
+set completion-group-fg "#c8c093"
+set completion-highlight-bg "#957fb8"
+set completion-highlight-fg "#16161d"
+set default-fg "#dcd7ba"
+set default-bg "#1f1f28"
+set font "Iosevka Regular 16"
+set inputbar-bg "#1f1f28"
+set inputbar-fg "#957fb8"
+set notification-bg "#6a9589"
+set notification-fg "#16161d"
+set notification-error-bg "#e82424"
+set notification-error-fg "#16161d"
+set notification-warning-bg "#ff9e3b"
+set notification-warning-fg "#16161d"
+set statusbar-bg "#16161d"
+set statusbar-fg "#c8c093"

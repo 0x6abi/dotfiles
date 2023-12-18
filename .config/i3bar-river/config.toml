@@ -1,22 +1,22 @@
 command = "i3status-rs"
 
-background = "#1f1d2e"
-color = "#e0def4"
+background = "#1f1f28"
+color = "#dcd7ba"
 tag_fg = "#e0def4"
-tag_bg = "#191724"
-tag_focused_fg = "#1f1d2e"
-tag_focused_bg = "#c4a7e7"
-tag_urgent_fg = "#1f1d2e"
-tag_urgent_bg = "#eb6f92"
+tag_bg = "#1f1f28"
+tag_focused_fg = "#16161d"
+tag_focused_bg = "#957fb8"
+tag_urgent_fg = "#16161d"
+tag_urgent_bg = "#e82424"
 tag_inactive_fg = "#6e6a86"
 tag_inactive_bg = "#1f1d2e"
 
-font = "FiraCode Nerd Font 16"
+font = "Iosevka Regular 20"
 height = 30 
 separator_width = 0
-tags_r = 6
-tags_padding = 25
-blocks_r = 6
+tags_r = 0
+tags_padding = 15
+blocks_r = 0
 blocks_overlap = 0
 
 position = "top"
