@@ -7,8 +7,9 @@ return {
     spell = false,                    -- sets vim.opt.spell
     signcolumn = "auto",              -- sets vim.opt.signcolumn to auto
     wrap = false,                     -- sets vim.opt.wrap
-    guifont = "FiraCode Nerd Font:h14", -- neovide font
+    guifont = "FiraCode Nerd Font:h16", -- neovide font
     title = true,                     -- set termtitle
+    conceallevel = 2,              -- conceal Markdown formatters
   },
   g = {
     mapleader = " ",               -- sets vim.g.mapleader
