@@ -11,7 +11,7 @@ tag_urgent_bg = "#e82424"
 tag_inactive_fg = "#6e6a86"
 tag_inactive_bg = "#1f1d2e"
 
-font = "Iosevka Regular 20"
+font = "FiraCode Nerd Font 20"
 height = 30 
 separator_width = 0
 tags_r = 0
