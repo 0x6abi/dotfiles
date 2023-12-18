@@ -23,6 +23,8 @@ starship
 stow
 swaybg
 swayidle
+texlive
+texlive-langgerman
 ttf-mononoki-nerd
 udisks2
 waylock
