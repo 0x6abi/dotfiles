@@ -61,20 +61,23 @@ zle -N zle-line-init
 zstyle ':completion:*' menu select
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-up-line-or-history
-bindkey -M menuselect 'k' vi-down-line-or-history
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'j' vi-down-line-or-history
 
 # disable <c-s> and <c-q>
 stty stop undef
 stty start undef
 
 ### plugins ###
-[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
-plug "zsh-users/zsh-syntax-highlighting"
-plug "zap-zsh/fzf"
-plug "hlissner/zsh-autopair"
-plug "${XDG_CONFIG_HOME:-$HOME/.config}/aliases.sh"
-plug "zsh-users/zsh-autosuggestions"
+plugin_dir='/usr/share/zsh/plugins'
+source "$plugin_dir/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$plugin_dir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$plugin_dir/zsh-autopair/autopair.zsh"
+source '/usr/share/fzf/completion.zsh'
+source '/usr/share/fzf/key-bindings.zsh'
+source "${XDG_CONFIG_HOME:-$HOME/.config}/aliases.sh"
+
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # starship prompt
 eval "$(starship init zsh)"

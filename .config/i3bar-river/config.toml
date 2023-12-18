@@ -1,0 +1,33 @@
+command = "i3status-rs"
+
+background = "#1f1d2e"
+color = "#e0def4"
+tag_fg = "#e0def4"
+tag_bg = "#191724"
+tag_focused_fg = "#1f1d2e"
+tag_focused_bg = "#c4a7e7"
+tag_urgent_fg = "#1f1d2e"
+tag_urgent_bg = "#eb6f92"
+tag_inactive_fg = "#6e6a86"
+tag_inactive_bg = "#1f1d2e"
+
+font = "FiraCode Nerd Font 16"
+height = 30 
+margin_top = 4
+margin_bottom = 4
+margin_left = 4
+margin_right = 4
+separator_width = 0
+tags_r = 6
+tags_padding = 25
+blocks_r = 6
+blocks_overlap = 0
+
+position = "top"
+hide_inactive_tags = false
+show_layout_name = false
+# blend = true
+# show_mode = true
+
+[wm.river]
+max_tag = 5

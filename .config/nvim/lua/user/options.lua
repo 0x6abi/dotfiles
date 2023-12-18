@@ -10,6 +10,8 @@ return {
     guifont = "FiraCode Nerd Font:h16", -- neovide font
     title = true,                     -- set termtitle
     conceallevel = 2,              -- conceal Markdown formatters
+    swapfile = false,
+    undofile = true,
   },
   g = {
     mapleader = " ",               -- sets vim.g.mapleader

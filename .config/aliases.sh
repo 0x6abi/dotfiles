@@ -5,6 +5,7 @@ alias v='nvim'
 alias nv='neovide'
 alias g='git'
 alias c='cargo'
+alias zat='zathura --fork'
 
 # interactive file modification
 alias rm='rm -i'
@@ -22,5 +23,8 @@ alias egrep='egrep --color=always'
 alias fgrep='fgrep --color=always'
 alias rg='rg --color=always'
 
-#dotfiles
+# dotfiles
 alias dots='cd ~/.dots && stow . && cd - &> /dev/null'
+
+# latex document
+alias new_doc="cp ~/templates/latex/*.tex $PWD"

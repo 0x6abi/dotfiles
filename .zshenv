@@ -1,8 +1,9 @@
 #!/bin/sh
 
 # default programs
-export EDITOR='helix'
+export EDITOR='nvim'
 export PAGER='less'
+export MANPAGER='nvim +Man!'
 
 # xdg variables
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -28,7 +29,6 @@ export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 # add scripts to path
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:${CARGO_HOME:-$HOME/.local/share/cargo}/bin"
-export PATH="$PATH:${XDG_DATA_HOME:-$HOME/.local/share}/npm/bin"
 
 # use tty for gpg auth
 export GPG_TTY=$(tty)
