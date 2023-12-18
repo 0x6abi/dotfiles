@@ -1,49 +1,43 @@
 #!/bin/sh
 
-# This is the example configuration file for river.
-#
-# If you wish to edit this, you will probably want to copy it to
-# $XDG_CONFIG_HOME/river/init or $HOME/.config/river/init first.
-#
-# See the river(1), riverctl(1), and rivertile(1) man pages for complete
-# documentation.
-# Note: the "Super" modifier is also known as Logo, GUI, Windows, Mod4, etc.
-
 # disable bluetooth controller by default to save battery
 rfkill block bluetooth
 
 # notification demon
 riverctl spawn mako
 
+# output configuration
+riverctl spawn kanshi
+
 # wallpaper
 riverctl spawn "swaybg -m fill -i $XDG_CONFIG_HOME/swaybg/wallpaper.jpg"
 
 # spawn wob (display volume, brightness)
 WOBSOCK=$XDG_RUNTIME_DIR/wob.sock
-rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob &
+riverctl spawn "rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob"
 
 # tags
 riverctl spawn tag-overlay
 
-# run programs on startup
-# use foot server for smaller memory footprint
 # idle management
 riverctl spawn idle-manager
 
-# Super+Shift+Return to start an instance of alacritty
+# terminal
 riverctl map normal Super+Shift Return spawn "alacritty"
 
-# Open the menu with Super+(Shift+)P
+# app launcher
 riverctl map normal Super P            spawn fuzzel
+
+# passwords
 riverctl map normal Super+Shift P      spawn passmenu
 
 # open browser
 riverctl map normal Super B            spawn qutebrowser
 
-# power management with Super+C
-riverctl map normal Super C spawn "pwr fuzzel"
+# power management
+riverctl map normal Super C            spawn "pwr fuzzel"
 
-# Super+Q to close the focused view
+# Super+Shift+Q to close the focused view
 riverctl map normal Super+Shift Q close
 
 # Super+Shift+E to exit river
@@ -139,18 +133,7 @@ riverctl map normal Super Right send-layout-cmd rivertile "main-location right"
 riverctl map normal Super Down  send-layout-cmd rivertile "main-location bottom"
 riverctl map normal Super Left  send-layout-cmd rivertile "main-location left"
 
-# Declare a passthrough mode. This mode has only a single mapping to return to
-# normal mode. This makes it useful for testing a nested wayland compositor
-riverctl declare-mode passthrough
-
-# Super+F11 to enter passthrough mode
-riverctl map normal Super F11 enter-mode passthrough
-
-# Super+F11 to return to normal mode
-riverctl map passthrough Super F11 enter-mode normal
-
-# Various media key mapping examples for both normal and locked mode which do
-# not have a modifier
+# use media and brightness keys also with a locked screen
 for mode in normal locked
 do
     # Control pulse audio volume with wpctl
