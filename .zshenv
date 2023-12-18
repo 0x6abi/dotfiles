@@ -29,6 +29,10 @@ export HISTSIZE=5000
 export SAVESIZE="${HISTSIZE:-5000}"
 export SAVEHIST="${HISTSIZE:-5000}"
 
+# pass options
+export PASSWORD_STORE_CLIP_TIME="15"
+export PASSWORD_STORE_GENERATED_LENGTH="32"
+
 # add scripts to path
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="${CARGO_HOME:-${XDG_DATA_HOME:-$HOME/.local/share}/cargo}/bin:$PATH"
