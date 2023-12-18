@@ -15,7 +15,7 @@
 # spawn programs on startup
 riverctl spawn "i3bar-river"
 riverctl spawn "foot --server"
-riverctl spawn "swaybg -m fill -i $HOME/pics/saved_pics/wallpapers/2602282-1529757983.jpg"
+riverctl spawn "swaybg -m fill -i ${XDG_CONFIG_HOME:-$HOME/.config}/river/wallpaper.jpg"
 
 # Super+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
 riverctl map normal Super+Shift Return spawn footclient
