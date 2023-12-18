@@ -23,7 +23,8 @@ riverctl spawn tag-overlay
 riverctl spawn idle-manager
 
 # terminal
-riverctl map normal Super+Shift Return spawn "alacritty"
+riverctl spawn "foot --server"
+riverctl map normal Super+Shift Return spawn footclient
 
 # app launcher
 riverctl map normal Super P            spawn fuzzel
