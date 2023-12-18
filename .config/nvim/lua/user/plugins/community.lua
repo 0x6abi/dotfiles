@@ -8,7 +8,6 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.cpp" },
-  { import = "astrocommunity.markdown-and-latex.vimtex" },
   { import = "astrocommunity.project.project-nvim" },
   { import = "astrocommunity.motion.mini-move" },
   { import = "astrocommunity.motion.mini-surround" },
