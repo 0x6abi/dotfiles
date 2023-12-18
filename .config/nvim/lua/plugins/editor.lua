@@ -50,9 +50,14 @@ return {
 	{
 		"echasnovski/mini.comment",
 		keys = { "gc", "gcc" },
-		config = function()
-			require("mini.comment").setup()
-		end,
+		opts = {
+			mappings = {
+				comment = "gc",
+				comment_line = "gcc",
+				comment_visual = "gc",
+				textobject = "gc",
+			},
+		},
 	},
 	{
 		"echasnovski/mini.pairs",
@@ -66,13 +71,13 @@ return {
 		keys = { "gza", "gzd", "gzf", "gzF", "gzh", "gzr" },
 		opts = {
 			mappings = {
-				add = 'gza',
-				delete = 'gzd',
-				find = 'gzf',
-				find_left = 'gzF',
-				highlight = 'gzj',
-				replace = 'gzr',
-			}
-		}
+				add = "gza",
+				delete = "gzd",
+				find = "gzf",
+				find_left = "gzF",
+				highlight = "gzj",
+				replace = "gzr",
+			},
+		},
 	},
 }
