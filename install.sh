@@ -7,7 +7,7 @@ cd ~/projects/dotfiles
 
 # install official packages
 sudo pacman -Syu
-sudo pacman -S $(cat pkgs.txt) --no-confirm
+sudo pacman -S $(cat pkgs.txt) --noconfirm --needed
 
 # install AUR helper
 git clone https://aur.archlinux.org/aura-bin.git ~/aura-bin
@@ -18,7 +18,7 @@ cd ~/projects/dotfiles
 rm ~/aura-bin -rf
 
 # install AUR packages
-sudo aura -A $(cat pkgs_aur.txt) --no-confirm
+sudo aura -A $(cat pkgs_aur.txt) --noconfirm --needed
 
 # zsh does not create directories itself, so to ensure that zsh files get stored 
 # at the correct location, we'll have to manually create them
