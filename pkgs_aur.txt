@@ -1,2 +1,5 @@
 i3bar-river
+mpdris2
+qt6-webengine-widevide
+wlr-randr
 zsh-autopair-git
