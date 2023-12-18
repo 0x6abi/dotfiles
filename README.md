@@ -5,6 +5,6 @@ To install my dotfiles `sudo` and `git` are required. You also have to be able t
 At the moment only Arch Linux is supported.
 
 Run the following command:
-```curl https://raw.githubusercontent.com/ninikx/dotfiles/wsl/install.sh | bash```
+```curl https://raw.githubusercontent.com/ninikx/dotfiles/wsl/install.sh | sh```
 
 CAUTION: never run shell scripts without checking them first
