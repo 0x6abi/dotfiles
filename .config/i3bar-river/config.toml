@@ -13,10 +13,6 @@ tag_inactive_bg = "#1f1d2e"
 
 font = "FiraCode Nerd Font 16"
 height = 30 
-margin_top = 4
-margin_bottom = 4
-margin_left = 4
-margin_right = 4
 separator_width = 0
 tags_r = 6
 tags_padding = 25
