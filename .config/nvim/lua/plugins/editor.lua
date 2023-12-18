@@ -1,41 +1,38 @@
 return {
 	{
-		'nvim-treesitter/nvim-treesitter',
-		build = ':TSUpdate',
-		event = "VeryLazy",
-		init = function()
-			require('nvim-treesitter.query_predicates')
-		end,
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		priority = 1001,
 		config = function(_, opts)
-			if type(opts.ensure_installed) == "table" then
-				local added = {}
-				opts.ensure_installed = vim.tbl_filter(function(lang)
-					if added[lang] then
-						return false
-					end
-				added[lang] = true
-				return true
-				end, opts.ensure_installed)
-			end
-			require('nvim-treesitter.configs').setup(opts)
+			require("nvim-treesitter.install").prefer_git = true
+			require("nvim-treesitter.configs").setup(opts)
 		end,
 		opts = {
-			ensure_installed = { 'c', 'bash', 'lua', 'java', 'rust', 'python' },
-			highlight = {
-				enable = true,
-			}
+			ensure_installed = {
+				"bash",
+				"c",
+				"comment",
+				"haskell",
+				"html",
+				"java",
+				"json",
+				"lua",
+				"make",
+				"markdown",
+				"rust",
+				"xml",
+			},
+			highlight = { enable = true },
 		},
 	},
 	{
-		'echasnovski/mini.basics',
-		config = function(_, opts)
-			require('mini.basics').setup(opts)
-		end,
+		"echasnovski/mini.basics",
+		event = "VeryLazy",
 		opts = {
 			options = {
 				basic = true,
 				extra_ui = false,
-				win_borders = 'solid',
+				win_borders = "solid",
 			},
 			mappings = {
 				basic = true,
@@ -48,6 +45,34 @@ return {
 				relnum_in_visual_mode = false,
 			},
 			silent = true,
+		},
+	},
+	{
+		"echasnovski/mini.comment",
+		keys = { "gc", "gcc" },
+		config = function()
+			require("mini.comment").setup()
+		end,
+	},
+	{
+		"echasnovski/mini.pairs",
+		event = "VeryLazy",
+		config = function()
+			require("mini.pairs").setup()
+		end,
+	},
+	{
+		"echasnovski/mini.surround",
+		keys = { "gza", "gzd", "gzf", "gzF", "gzh", "gzr" },
+		opts = {
+			mappings = {
+				add = 'gza',
+				delete = 'gzd',
+				find = 'gzf',
+				find_left = 'gzF',
+				highlight = 'gzj',
+				replace = 'gzr',
+			}
 		}
-	}
+	},
 }
