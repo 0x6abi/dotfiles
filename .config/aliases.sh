@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # stuff i use all the time
-alias v='av'
+alias v='nvim'
 alias g='git'
 alias c='cargo'
 alias zat='zathura --fork'
