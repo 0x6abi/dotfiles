@@ -1,9 +1,9 @@
 #!/bin/sh
 
 # default programs
-export EDITOR='nvim'
+export EDITOR='av'
 export PAGER='less'
-export MANPAGER='nvim +Man!'
+export MANPAGER='av +Man!'
 
 # xdg variables
 export XDG_CACHE_HOME="$HOME/.cache"
