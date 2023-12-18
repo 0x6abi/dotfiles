@@ -160,7 +160,7 @@ riverctl border-color-unfocused 0x54546d
 
 # keyboard options
 riverctl set-repeat 50 300
-riverctl keyboard-layout -options "caps:swapescape" us
+riverctl keyboard-layout -options "caps:swapescape,compose:ralt" us
 
 
 # cursor options
