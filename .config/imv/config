@@ -1,25 +1,15 @@
-# Default config for imv
-
 [options]
-
-# Suppress built-in key bindings, and specify them explicitly in this
-# config file.
+background = 1f1f28
 suppress_default_binds = true
 
 overlay = true
 overlay_font = Cascadia Code:17
 overlay_text = "$(basename "$imv_current_file")" $imv_width x $imv_height
-
-[aliases]
-# Define aliases here. Any arguments passed to an alias are appended to the
-# command.
-# alias = command to run
+overlay_text_color = dcd7ba
+overlay_background_color = 16161d
 
 [binds]
-# Define some key bindings
 q = quit
-
-# Image navigation
 <Left> = prev
 <bracketleft> = prev
 h = prev
@@ -28,24 +18,15 @@ h = prev
 l = next
 gg = goto 1
 <Shift+G> = goto -1
-
-# Panning
 j = pan 0 -50
 k = pan 0 50
-
-# Zooming
 <Up> = zoom 1
 <Shift+plus> = zoom 1
 i = zoom 1
 <Down> = zoom -1
 <minus> = zoom -1
 o = zoom -1
-
-# Rotate Clockwise by 90 degrees
 <Ctrl+r> = rotate by 90
-
-# Other commands
-x = close
 f = fullscreen
 d = overlay
 p = exec echo $imv_current_file
@@ -54,11 +35,7 @@ s = scaling next
 <Shift+S> = upscaling next
 a = zoom actual
 r = reset
-
-# Gif playback
 <period> = next_frame
 <space> = toggle_playing
-
-# Slideshow control
 t = slideshow +1
 <Shift+T> = slideshow -1
