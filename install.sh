@@ -9,14 +9,14 @@ sudo pacman -Syu
 sudo pacman -S $(cat pkgs.txt) --noconfirm --needed
 
 # install the aur helper
-git clone https://aur.archlinux.org/aura-bin.git
-cd ~/aura-bin
+git clone https://aur.archlinux.org/paru-bin.git
+cd ~/paru-bin
 makepkg -si
 cd ~/.dots
-rm ~/aura-bin -rf
+rm ~/paru-bin -rf
 
 # install aur packages
-sudo aura -A $(cat pkgs_aur.txt) --noconfirm --needed
+paru -S $(cat pkgs_aur.txt) --noconfirm --needed
 
 # clone astronvim (good starter nvim config)
 git clone --depth=1 https://github.com/AstroNvim/AstroNvim "~/${XDG_CONFIG_HOME:-$HOME/.config}/nvim"
