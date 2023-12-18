@@ -4,7 +4,7 @@ set highlight-active-color "#e46876"
 set recolor true
 set recolor-darkcolor "#dcd7ba"
 set recolor-lightcolor "#1f1f28"
-# set recolor-reverse-video true
+set recolor-reverse-video true
 set render-loading false
 set statusbar-home-tilde true
 
@@ -27,3 +27,7 @@ set notification-warning-bg "#ff9e3b"
 set notification-warning-fg "#16161d"
 set statusbar-bg "#16161d"
 set statusbar-fg "#c8c093"
+set index-bg "#1f1f28"
+set index-fg "#dcd7ba"
+set index-active-bg "##7fb4ca"
+set index-active-fg "#ff5d62"

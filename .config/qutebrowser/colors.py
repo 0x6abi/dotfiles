@@ -79,10 +79,10 @@ c.colors.downloads.bar.bg = sumiInk1
 c.colors.downloads.error.bg = samuraiRed
 c.colors.downloads.error.fg = sumiInk1
 
-c.colors.downloads.start.bg = springGreen
+c.colors.downloads.start.bg = springBlue
 c.colors.downloads.start.fg = sumiInk1
 
-c.colors.downloads.stop.bg = springBlue
+c.colors.downloads.stop.bg = springGreen
 c.colors.downloads.stop.fg = sumiInk1
 
 c.colors.downloads.system.bg = "rgb"
