@@ -20,12 +20,12 @@ case "$1" in
     echo 'lock...'
     waylock -fork-on-lock -init-color 0x1f1f28 -input-color 0x957fb8 -fail-color 0xe82424
     ;;
-  'bemenu')
-    action=$(echo "$actions" | tr $delim '\n' | bemenu -p 'power: ')
+  'fuzzel')
+    action=$(echo "$actions" | tr $delim '\n' | fuzzel -d -p 'power: ')
     pwr "$action"
     ;;
   *)
     echo "USAGE: pwr <$(echo "$actions" | tr $delim '|')>"
-    echo '       pwr bemenu   | select an option using bemenu'
+    echo '       pwr fuzzel   | select an option using fuzzel'
     ;;
 esac

@@ -25,11 +25,11 @@ riverctl spawn "swayidle -w timeout 300 'waylock -fork-on-lock -init-color 0x1f1
 riverctl map normal Super+Shift Return spawn footclient
 
 # Open the menu with Super+(Shift+)P
-riverctl map normal Super P            spawn bemenu-run
+riverctl map normal Super P            spawn fuzzel
 riverctl map normal Super+Shift P      spawn passmenu
 
 # power management with Super+C
-riverctl map normal Super C spawn "pwr bemenu"
+riverctl map normal Super C spawn "pwr fuzzel"
 
 # Super+Q to close the focused view
 riverctl map normal Super+Shift Q close

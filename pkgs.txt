@@ -1,11 +1,11 @@
 acpilight
 base-devel
-bemenu-wayland
 bluez
 bluez-utils
 borg
 calcurse
 foot
+fuzzel
 fzf
 git
 i3status-rust
