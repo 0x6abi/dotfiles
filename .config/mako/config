@@ -1,0 +1,10 @@
+font=Iosevka Nerd Font 12
+background-color=#dcd7ba
+text-color=#1f1f28
+width=300
+height=100
+border-size=1
+border-color=#1f1f28
+border-radius=0
+default-timeout=5000
+layer=overlay
