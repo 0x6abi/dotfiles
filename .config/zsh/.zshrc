@@ -77,7 +77,11 @@ source '/usr/share/fzf/completion.zsh'
 source '/usr/share/fzf/key-bindings.zsh'
 source "${XDG_CONFIG_HOME:-$HOME/.config}/aliases.sh"
 
+# does not work for some reason in .zshenv; probably gets overwritten by the plugin
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+# set correct gpg pinentry
+export GPG_TTY=$(tty)
 
 # starship prompt
 eval "$(starship init zsh)"

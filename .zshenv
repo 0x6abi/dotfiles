@@ -29,6 +29,3 @@ export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 # add scripts to path
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:${CARGO_HOME:-$HOME/.local/share/cargo}/bin"
-
-# use tty for gpg auth
-export GPG_TTY=$(tty)
