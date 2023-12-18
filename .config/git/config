@@ -1,6 +1,6 @@
 [core]
 	pager = less
-	editor = helix
+	editor = nvim
 [user]
 	email = 144284968+ninikx@users.noreply.github.com
 	name = nini
@@ -27,3 +27,5 @@
 	helper = libsecret
 [push]
 	autoSetupRemote = true
+[author]
+	name = gabi
