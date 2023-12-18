@@ -2,6 +2,7 @@ return {
 	"rebelot/kanagawa.nvim",
 	lazy = false,
 	opts = {
+		transparent = true,
 		colors = {
 			theme = {
 				all = {
@@ -14,6 +15,8 @@ return {
 		overrides = function(colors)
 			local theme = colors.theme
 			return {
+				-- More transparency
+				TabLineFill = { bg = "none" },
 
 				-- only highlight line number
 				CursorLine = { bg = "none" },
