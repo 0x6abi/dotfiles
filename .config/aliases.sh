@@ -26,4 +26,4 @@ alias rg='rg --color=always'
 alias mvn='mvn -gs "$XDG_CONFIG_HOME/maven/settings.xml"'
 
 #dotfiles
-alias dots='cd ~/projects && stow dotfiles && cd - &> /dev/null'
+alias dots='cd ~/dotfiles && stow . && cd - &> /dev/null'
