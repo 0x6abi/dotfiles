@@ -1,8 +1,9 @@
-# Dotfiles for my Fedora based Framework Laptop
-My primary code editor is [AstroNvim](https://github.com/AstroNvim/AstroNvim) with the Neovide GUI
+# Dotfiles for my Arch based Framework Laptop
 
-To install my dotfiles `sudo` and `git` are required. You also have to be able to use `sudo` (probably by being part of the wheel group).
-The package names are from Fedora Workstation.
+Dotfiles for Arch Linux with riverwm, zsh, neovim, qutebrowser, and overall a vim-based workflow, with the beautiful kanagawa colorscheme.
+
+Only `git` and `sudo` privileges are required to install the dotfiles.
+Currently only compatible with Arch Linux (probably Arch-based Distros (as long as they use `systemd`) as well, I just didn't test it).
 
 Run the following command:
 ```bash
