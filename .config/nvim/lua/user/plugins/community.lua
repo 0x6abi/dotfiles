@@ -7,6 +7,7 @@ return {
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.java" },
+  { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.project.project-nvim" },
   { import = "astrocommunity.motion.mini-move" },
