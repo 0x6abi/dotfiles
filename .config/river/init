@@ -12,6 +12,13 @@
 # disable bluetooth controller by default to save battery
 rfkill block bluetooth
 
+# notification demon
+riverctl spawn mako
+
+# spawn wob (display volume, brightness)
+WOBSOCK=$XDG_RUNTIME_DIR/wob.sock
+rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob &
+
 # tags
 riverctl spawn "river-tag-overlay --border-width 1 --tag-amount 5 \
     --tags-per-row 5 --square-size 20 --square-inner-padding 5 \
@@ -151,10 +158,10 @@ riverctl map passthrough Super F11 enter-mode normal
 # not have a modifier
 for mode in normal locked
 do
-    # Control pulse audio volume with pamixer (https://github.com/cdemoulins/pamixer)
-    riverctl map $mode None XF86AudioRaiseVolume  spawn 'pamixer -i 5'
-    riverctl map $mode None XF86AudioLowerVolume  spawn 'pamixer -d 5'
-    riverctl map $mode None XF86AudioMute         spawn 'pamixer --toggle-mute'
+    # Control pulse audio volume with wpctl
+    riverctl map $mode None XF86AudioRaiseVolume  spawn "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && wpctl get-volume @DEFAULT_AUDIO_SINK@ | sed 's/[^0-9]//g' > $WOBSOCK "
+    riverctl map $mode None XF86AudioLowerVolume  spawn "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && wpctl get-volume @DEFAULT_AUDIO_SINK@ | sed 's/[^0-9]//g' > $WOBSOCK "
+    riverctl map $mode None XF86AudioMute         spawn "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && (wpctl get-volume @DEFAULT_AUDIO_SINK@ | rg -q 'MUTED' && notify-send 'MUTED') || notify-send 'UNMUTED'"
 
     # Control MPRIS aware media players with playerctl (https://github.com/altdesktop/playerctl)
     riverctl map $mode None XF86AudioMedia spawn 'playerctl play-pause'
@@ -162,16 +169,16 @@ do
     riverctl map $mode None XF86AudioPrev  spawn 'playerctl previous'
     riverctl map $mode None XF86AudioNext  spawn 'playerctl next'
 
-    # Control screen backlight brightness with light (https://github.com/haikarainen/light)
-    riverctl map $mode None XF86MonBrightnessUp   spawn 'xbacklight -inc 5'
-    riverctl map $mode None XF86MonBrightnessDown spawn 'xbacklight -dec 5'
+    # Control screen backlight brightness with xbacklight
+    riverctl map $mode None XF86MonBrightnessUp   spawn "xbacklight -inc 5 && xbacklight -get > $WOBSOCK"
+    riverctl map $mode None XF86MonBrightnessDown spawn "xbacklight -dec 5 && xbacklight -get > $WOBSOCK"
 done
 
 # Set background and border stuff
-riverctl background-color 0xd27e99
+riverctl background-color 0x1f1f28
 riverctl border-width 1
-riverctl border-color-focused 0xdcd7ba
-riverctl border-color-unfocused 0xd27e99
+riverctl border-color-focused 0xd27e99
+riverctl border-color-unfocused 0x1f1f28
 riverctl border-color-urgent 0xe82424
 
 # keyboard options
@@ -190,4 +197,4 @@ riverctl hide-cursor when-typing enabled
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
-rivertile -view-padding 2 -outer-padding 2 &
+rivertile -view-padding 0 -outer-padding 0 &
