@@ -22,7 +22,7 @@ return {
         NormalFloat = { bg = "none" },
         FloatBorder = { bg = "none" },
         FloatTitle = { bg = "none" },
-        NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.fg_dim },
+        NormalDark = { bg = colors.palette.sumiInk1 },
         LazyNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
         MasonNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
 
