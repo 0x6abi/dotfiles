@@ -1,5 +1,4 @@
 acpilight
-alacritty
 amd-ucode
 base
 base-devel
@@ -88,8 +87,9 @@ texlive-publishers
 texlive-xetex
 thunar
 tmux
-ttf-iosevka-nerd
+ttf-cascadia-code
 ttf-liberation
+ttf-nerd-fonts-symbols
 udisks2
 waylock
 wireplumber
