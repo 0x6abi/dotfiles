@@ -16,6 +16,9 @@ sudo pacman -U aura-*-x86_64.pkg.tar.zst --noconfirm
 cd ~/dotfiles
 rm ~/aura-bin -rf
 
+# clone astronvim
+git clone --depth=1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+
 # install AUR packages
 sudo aura -A $(cat pkgs_aur.txt) --noconfirm --needed
 
