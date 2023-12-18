@@ -10,6 +10,8 @@ return {
 		conceallevel = 2, -- conceal Markdown formatters
 		swapfile = false,
 		undofile = true,
+		shiftwidth = 4,
+		tabstop = 4,
 	},
 	g = {
 		mapleader = " ", -- sets vim.g.mapleader
