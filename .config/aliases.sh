@@ -28,3 +28,6 @@ alias dots='cd ~/.dots && stow . && cd - &> /dev/null'
 # calcurse
 alias today='calcurse -a'
 alias todo='calcurse -t'
+
+# stop maven from creating '$HOME/.m2'
+alias mvn='mvn -gs="$XDG_CONFIG_HOME/maven/settings.xml"'

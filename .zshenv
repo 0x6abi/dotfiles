@@ -21,7 +21,9 @@ export RUSTUP_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/rustup"
 export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/npm/npmrc"
 export ZDOTDIR="${XDG_CONFIG_DIR:-$HOME/.config}/zsh"
 export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
-export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/pass"
+export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="${XDG_CONFIG_HOME:-$HOME/.config}/java"
+export PYTHONSTARTUP="${XDG_CONFIG_HOME:-$HOME/.config}/python/pythonrc"
 
 # zsh variables
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh/history"
