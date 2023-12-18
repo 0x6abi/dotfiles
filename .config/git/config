@@ -25,3 +25,5 @@
 	gpgsign = true
 [push]
 	autoSetupRemote = true
+[includeIf "gitdir:~/docs/uni/ws2324/prog/uebungen"]
+	path = ~/docs/uni/ws2324/prog/uebungen/.gitconfig
