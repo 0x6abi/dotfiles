@@ -1,5 +1,7 @@
 # Dotfiles for my Arch based Framework Laptop
 
+![Screenshot of Desktop](desktop.png)
+
 Dotfiles for Arch Linux with riverwm, zsh, neovim, qutebrowser, and overall a vim-based workflow, with the beautiful kanagawa colorscheme.
 
 Only `curl`, `git` and `sudo` privileges are required to install the dotfiles.

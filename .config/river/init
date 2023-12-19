@@ -41,6 +41,9 @@ riverctl map normal Super C            spawn "pwr fuzzel"
 # monitor layouts
 riverctl map normal Super M            spawn mntr
 
+# screenshot with grim
+riverctl map normal Super S            spawn grim
+
 # Super+Shift+Q to close the focused view
 riverctl map normal Super+Shift Q close
 

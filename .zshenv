@@ -26,6 +26,7 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
 export GHCUP_USE_XDG_DIRS=1
 export STACK_XDG=1
+export GRIM_DEFAULT_DIR="$(xdg-user-dir PICTURES)/screenshots/"
 
 # fix jetbrains programs
 export _JAVA_AWT_WM_NONREPARENTING=1

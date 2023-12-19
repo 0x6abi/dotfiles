@@ -31,3 +31,6 @@ alias todo='calcurse -t'
 
 # stop maven from creating '$HOME/.m2'
 alias mvn='mvn -gs="$XDG_CONFIG_HOME/maven/settings.xml"'
+
+# ignore bunnyfetch error
+alias bf='bunnyfetch 2> /dev/null'
