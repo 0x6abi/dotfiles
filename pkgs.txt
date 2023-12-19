@@ -14,6 +14,7 @@ fprintd
 fuzzel
 fzf
 git
+grim
 ibus
 imv
 jq

@@ -9,7 +9,6 @@ python-spotdl
 python-syncedlyrics
 qt6-webengine-widevine
 river-tag-overlay-git
-tofi
 wlr-randr
 wob
 zsh-autopair-git
