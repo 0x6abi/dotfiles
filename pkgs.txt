@@ -93,6 +93,7 @@ ttf-cascadia-code
 ttf-liberation
 ttf-nerd-fonts-symbols
 udisks2
+virtualbox
 waylock
 wireplumber
 wl-clipboard
