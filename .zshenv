@@ -42,6 +42,6 @@ export PASSWORD_STORE_CLIP_TIME="15"
 export PASSWORD_STORE_GENERATED_LENGTH="32"
 
 # add scripts to path
-export PATH="$XDG_DATA_HOME/JetBrains/scripts:$PATH"
+export PATH="$XDG_DATA_HOME/JetBrains/Toolbox/scripts:$PATH"
 export PATH="$CARGO_HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
