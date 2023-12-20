@@ -1,14 +1,4 @@
-bunnyfetch
-ghcup-hs-bin
-jetbrains-toolbox
-libinput-gestures
 mpdris2
-paru-bin
-puddletag
-python-spotdl
-python-syncedlyrics
-qt6-webengine-widevine
 river-tag-overlay-git
-wlr-randr
 wob
 zsh-autopair-git
