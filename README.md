@@ -9,7 +9,7 @@ Currently only compatible with Arch Linux (probably Arch-based Distros (as long 
 
 Run the following command:
 ```bash
-curl https://raw.githubusercontent.com/azxn/dotfiles/main/install.sh | sh
+curl https://raw.githubusercontent.com/gnbi/dotfiles/main/install.sh | sh
 ```
 
 CAUTION: never run shell scripts without checking them first
